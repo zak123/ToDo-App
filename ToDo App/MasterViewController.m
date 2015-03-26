@@ -185,12 +185,18 @@ numberOfRowsInSection:(NSInteger)section
         
     }];
     
+    unCompleteAction.backgroundColor = [UIColor redColor];
+    completeAction.backgroundColor = [UIColor colorWithRed:0 green:0.6 blue:0.2 alpha:1];
+    
+    
     UITableViewRowAction *deleteAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:@"Delete" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
         ToDo *task = [self.taskList objectAtIndex:indexPath.row];
         [self.taskList removeObject:task];
         [self.tableView reloadData];
     }];
-
+    
+    deleteAction.backgroundColor = [UIColor colorWithRed:0.6 green:0 blue:0 alpha:1];
+    
     ToDo *task = [self.taskList objectAtIndex:indexPath.row];
     
     if (task.isCompleted == YES) {
