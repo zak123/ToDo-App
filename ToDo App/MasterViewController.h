@@ -7,8 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DetailViewController.h"
+#import "AddToDoTableViewController.h"
 
-@interface MasterViewController : UITableViewController
+@interface MasterViewController : UITableViewController <AddToDoViewControllerDelegate>
+
+@property (strong, nonatomic) id detailItem;
+
+@property (strong, nonatomic) NSMutableArray *taskList;
 
 
 @end

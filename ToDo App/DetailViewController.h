@@ -7,11 +7,28 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ToDo.h"
+
+@class DetailViewController;
+
+@protocol PlayerDetailsViewControllerDelegate <NSObject>
+- (void)playerDetailsViewControllerDidCancel:
+(DetailViewController *)controller;
+- (void)playerDetailsViewController:
+(DetailViewController *)controller
+                       didAddTask:(ToDo *)task;
+@end
+
 
 @interface DetailViewController : UIViewController
 
-@property (strong, nonatomic) id detailItem;
+@property (strong, nonatomic) ToDo *detailItem;
+@property (strong, nonatomic) IBOutlet UILabel *detailTitleLabel;
+
 @property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+
+// Need a delegate here for picker screen to initiate new task
+
 
 @end
 
