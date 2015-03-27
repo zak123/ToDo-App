@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C984FADC-A005-47F0-B456-13E736CF26DA</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ToDo App</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>CF625811C22CB5552FD1DA281BCD22403DCB5298</key>
+		<string>https://github.com/zak123/ToDo-App.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ToDo App.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>CF625811C22CB5552FD1DA281BCD22403DCB5298</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/zak123/ToDo-App.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>CF625811C22CB5552FD1DA281BCD22403DCB5298</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CF625811C22CB5552FD1DA281BCD22403DCB5298</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ToDo%20App</string>
+		</dict>
+	</array>
+</dict>
+</plist>
