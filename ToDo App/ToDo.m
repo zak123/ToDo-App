@@ -10,4 +10,25 @@
 
 @implementation ToDo
 
+- (instancetype)initWithCoder:(NSCoder *)decoder
+{
+    self = [super init];
+    if (!self) {
+        return nil;
+    }
+    
+    self.title = [decoder decodeObjectForKey:@"title"];
+    self.titleDescription = [decoder decodeObjectForKey:@"titleDescription"];
+    
+    return self;
+}
+
+
+-(void) encodeWithCoder:(NSCoder *)encoder {
+    [encoder encodeObject:self.title forKey:@"title"];
+    [encoder encodeObject:self.titleDescription forKey:@"titleDescription"];
+}
+
+
+
 @end

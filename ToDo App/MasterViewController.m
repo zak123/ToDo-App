@@ -26,34 +26,32 @@
     return self;
 }
 
--(void) toDoController:(AddToDoTableViewController *)controller createdTask:(ToDo *)todo {
-    
-    
-    [_taskList addObject:todo];
-    
-    [self.tableView reloadData];
-}
+
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+        _taskList = [[NSMutableArray alloc] init];
+//    
+//    ToDo *task = [[ToDo alloc] init];
+//    task.title = @"Take out the trash";
+//    task.titleDescription = @"trash day is wednesday";
+//    task.priority = @"Most Important";
+//    
+//    [_taskList addObject:task];
+//    
+//    task = [[ToDo alloc] init];
+//    
+//    task.title = @"Go get groceries";
+//    task.titleDescription = @"bread, meat, fruit, drinks";
+//    task.priority = @"Important";
+//    
+//    [_taskList addObject:task];
     
-    _taskList = [[NSMutableArray alloc] init];
-    
-    ToDo *task = [[ToDo alloc] init];
-    task.title = @"Take out the trash";
-    task.titleDescription = @"trash day is wednesday";
-    task.priority = @"Most Important";
-    
-    [_taskList addObject:task];
-    
-    task = [[ToDo alloc] init];
-    
-    task.title = @"Go get groceries";
-    task.titleDescription = @"bread, meat, fruit, drinks";
-    task.priority = @"Important";
-    
-    [_taskList addObject:task];
+    NSArray *savedTasks = [NSKeyedUnarchiver unarchiveObjectWithFile:[self getFilePath]];
+    if (savedTasks) {
+        self.taskList = [savedTasks mutableCopy];
+    }
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -95,6 +93,13 @@
     }
 }
 
+-(NSString*)getFilePath{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectoryPath = [paths objectAtIndex:0];
+    return [documentsDirectoryPath stringByAppendingPathComponent:@"appData"];
+}
+
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -108,6 +113,17 @@ numberOfRowsInSection:(NSInteger)section
     return [self.taskList count];
 }
 
+-(void) toDoController:(AddToDoTableViewController *)controller createdTask:(ToDo *)todo {
+    
+    
+    [_taskList addObject:todo];
+    
+    
+    
+    [NSKeyedArchiver archiveRootObject:self.taskList toFile:[self getFilePath]];
+
+    [self.tableView reloadData];
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {

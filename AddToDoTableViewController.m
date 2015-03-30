@@ -41,20 +41,22 @@
     task.titleDescription = _descriptionInput.text;
     task.priority = @"default priority";
     
+    
+    
+    
     [self.delegate toDoController:self createdTask:task];
+    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
     return 1;
 }
