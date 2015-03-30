@@ -17,6 +17,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    DataHolder *dataHolder = [DataHolder sharedInstance];
+    
+    [dataHolder loadData];
+    
+    self.titleInput.text = dataHolder.defaultTitle;
+    self.descriptionInput.text = dataHolder.defaultDescription;
+    self.priorityInput.text = dataHolder.defaultPriority;
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;

@@ -17,6 +17,8 @@
 		B63CBA541AC34BB100D88023 /* ToDo_AppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B63CBA531AC34BB100D88023 /* ToDo_AppTests.m */; };
 		B63CBA621AC34C1000D88023 /* ToDo.m in Sources */ = {isa = PBXBuildFile; fileRef = B63CBA611AC34C1000D88023 /* ToDo.m */; };
 		B63CBA651AC34CEB00D88023 /* ToDoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B63CBA641AC34CEB00D88023 /* ToDoTableViewCell.m */; };
+		B69B22FE1AC9FFE0009D2A06 /* OptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B69B22FD1AC9FFE0009D2A06 /* OptionsViewController.m */; };
+		B69B23011ACA000E009D2A06 /* DataHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = B69B23001ACA000E009D2A06 /* DataHolder.m */; };
 		B6D693831AC37B4F0013A6E7 /* AddToDoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6D693821AC37B4F0013A6E7 /* AddToDoTableViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +52,10 @@
 		B63CBA611AC34C1000D88023 /* ToDo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToDo.m; sourceTree = "<group>"; };
 		B63CBA631AC34CEB00D88023 /* ToDoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToDoTableViewCell.h; sourceTree = "<group>"; };
 		B63CBA641AC34CEB00D88023 /* ToDoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToDoTableViewCell.m; sourceTree = "<group>"; };
+		B69B22FC1AC9FFE0009D2A06 /* OptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionsViewController.h; sourceTree = "<group>"; };
+		B69B22FD1AC9FFE0009D2A06 /* OptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionsViewController.m; sourceTree = "<group>"; };
+		B69B22FF1ACA000D009D2A06 /* DataHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataHolder.h; sourceTree = "<group>"; };
+		B69B23001ACA000E009D2A06 /* DataHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataHolder.m; sourceTree = "<group>"; };
 		B6D693811AC37B4F0013A6E7 /* AddToDoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddToDoTableViewController.h; path = ../AddToDoTableViewController.h; sourceTree = "<group>"; };
 		B6D693821AC37B4F0013A6E7 /* AddToDoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddToDoTableViewController.m; path = ../AddToDoTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,6 +103,10 @@
 				B6D693821AC37B4F0013A6E7 /* AddToDoTableViewController.m */,
 				B63CBA3B1AC34BB100D88023 /* MasterViewController.h */,
 				B63CBA3C1AC34BB100D88023 /* MasterViewController.m */,
+				B69B22FC1AC9FFE0009D2A06 /* OptionsViewController.h */,
+				B69B22FD1AC9FFE0009D2A06 /* OptionsViewController.m */,
+				B69B22FF1ACA000D009D2A06 /* DataHolder.h */,
+				B69B23001ACA000E009D2A06 /* DataHolder.m */,
 				B63CBA3E1AC34BB100D88023 /* DetailViewController.h */,
 				B63CBA3F1AC34BB100D88023 /* DetailViewController.m */,
 				B63CBA601AC34C1000D88023 /* ToDo.h */,
@@ -239,11 +249,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B69B23011ACA000E009D2A06 /* DataHolder.m in Sources */,
 				B63CBA621AC34C1000D88023 /* ToDo.m in Sources */,
 				B63CBA3A1AC34BB100D88023 /* AppDelegate.m in Sources */,
 				B63CBA3D1AC34BB100D88023 /* MasterViewController.m in Sources */,
 				B6D693831AC37B4F0013A6E7 /* AddToDoTableViewController.m in Sources */,
 				B63CBA651AC34CEB00D88023 /* ToDoTableViewCell.m in Sources */,
+				B69B22FE1AC9FFE0009D2A06 /* OptionsViewController.m in Sources */,
 				B63CBA371AC34BB100D88023 /* main.m in Sources */,
 				B63CBA401AC34BB100D88023 /* DetailViewController.m in Sources */,
 			);
@@ -368,6 +380,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "ToDo App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -378,6 +391,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "ToDo App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
